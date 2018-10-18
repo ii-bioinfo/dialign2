@@ -1,0 +1,16 @@
+From:continuumio/miniconda:4.5.4
+Bootstrap:docker
+
+%labels
+    MAINTAINER imp/imba bioinformatics core <ii-bioinfo@imp.ac.at>
+    DESCRIPTION dialign2 v2.2.1 conda based singularity container
+    VERSION 2.2.1
+
+%files
+    environment.yaml /
+
+%post
+    apt-get install -y procps
+
+    /opt/conda/bin/conda env update -n root -f /environment.yaml
+    /opt/conda/bin/conda clean -a

@@ -1,0 +1,7 @@
+name: dialign2
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - bioconda::dialign2=2.2.1
